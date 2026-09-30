@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CLEANR — Auto Detailing</title>
+  <meta name="description" content="Professionele auto-reiniging bij u aan huis. Boek eenvoudig online.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <div class="brand">CLEAN<span>R</span><small>AUTO DETAILING</small></div>
+  <nav>
+    <a href="#diensten">Diensten</a>
+    <a href="#prijzen">Prijzen</a>
+    <a href="#werkwijze">Werkwijze</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="btn primary" onclick="openBooking()">Boek nu →</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="pill">PROFESSIONELE AUTO-REINIGING</div>
+    <h1>Uw auto weer als <em>nieuw.</em></h1>
+    <p>Professionele auto-reiniging bij u aan huis. Snel, betrouwbaar en met oog voor detail.</p>
+    <div class="chips">
+      <span>♧ Interieur</span><span>🚘 Exterieur</span><span>✦ Dieptereiniging</span>
+    </div>
+    <div class="actions">
+      <button class="btn primary big" onclick="openBooking()">Boek een reiniging →</button>
+      <a class="btn ghost big" href="#prijzen">Bekijk prijzen</a>
+    </div>
+    <div class="stats"><div><b>100+</b><span>Tevreden klanten*</span></div><div><b>4.9/5</b><span>Klantbeoordeling*</span></div><div><b>Heel Nederland</b><span>Wij komen bij u thuis</span></div></div>
+  </div>
+  <div class="hero-visual">
+    <div class="photo-overlay"></div>
+    <div class="ai-card">
+      <div class="ai-title">🚘 CLEANR AI <span>● Online</span></div>
+      <div class="bubble">Hallo! 👋<br>Ik help u graag met het kiezen van een reiniging en het maken van een afspraak.</div>
+      <button onclick="openBooking()">📅 Een afspraak maken</button>
+      <button onclick="document.querySelector('#prijzen').scrollIntoView({behavior:'smooth'})">€ Prijs bekijken</button>
+      <button onclick="openChat()">❓ Een vraag stellen</button>
+    </div>
+  </div>
+</section>
+
+<section id="diensten" class="section">
+  <div class="section-head"><h2>Onze diensten</h2><p>Kies de reiniging die bij uw auto past.</p></div>
+  <div class="cards">
+    <article class="card"><div class="card-img interior"></div><h3>Interieurreiniging</h3><p>Grondige reiniging van stoelen, dashboard, vloeren en alle interieurdelen.</p><strong>Vanaf €50</strong><button class="btn small" onclick="openBooking('Interieurreiniging')">Boek nu →</button></article>
+    <article class="card"><div class="card-img exterior"></div><h3>Exterieurreiniging</h3><p>Uw auto schoon, glanzend en verzorgd van buiten.</p><strong>Vanaf €45</strong><button class="btn small" onclick="openBooking('Exterieurreiniging')">Boek nu →</button></article>
+    <article class="card"><div class="card-img complete"></div><h3>Complete reiniging</h3><p>Interieur + exterieur voor een volledig en professioneel resultaat.</p><strong>Vanaf €80</strong><button class="btn small" onclick="openBooking('Complete reiniging')">Boek nu →</button></article>
+  </div>
+</section>
+
+<section id="werkwijze" class="section split">
+  <div><h2>Zo eenvoudig is het</h2><p>Binnen enkele minuten uw afspraak geregeld.</p></div>
+  <div class="steps">
+    <div><b>01</b><span><strong>Kies uw dienst</strong><small>Selecteer het type reiniging.</small></span></div>
+    <div><b>02</b><span><strong>Kies datum en tijd</strong><small>Kies een moment dat u uitkomt.</small></span></div>
+    <div><b>03</b><span><strong>Wij komen naar u toe</strong><small>Wij reinigen uw auto op locatie.</small></span></div>
+    <div><b>04</b><span><strong>Geniet van een schone auto</strong><small>Uw auto weer als nieuw.</small></span></div>
+  </div>
+</section>
+
+<section class="beforeafter">
+  <div><h2>Het verschil ziet u zelf.</h2><p>Echte resultaten, geen filters.</p></div>
+  <div class="ba-grid"><div><span>VOOR</span><span>NA</span></div><div><span>VOOR</span><span>NA</span></div><div><span>VOOR</span><span>NA</span></div></div>
+</section>
+
+<section id="prijzen" class="section">
+  <div class="section-head"><h2>Transparante prijzen</h2><p>De definitieve prijs wordt vóór het boeken duidelijk getoond.</p></div>
+  <div class="price-grid">
+    <div class="price"><h3>Interieur</h3><b>€50</b><p>Vanaf · afhankelijk van formaat en staat</p><button class="btn small" onclick="openBooking('Interieurreiniging')">Kies deze</button></div>
+    <div class="price featured"><label>POPULAIR</label><h3>Compleet</h3><b>€80</b><p>Interieur + exterieur</p><button class="btn small" onclick="openBooking('Complete reiniging')">Kies deze</button></div>
+    <div class="price"><h3>Exterieur</h3><b>€45</b><p>Vanaf · afhankelijk van formaat</p><button class="btn small" onclick="openBooking('Exterieurreiniging')">Kies deze</button></div>
+  </div>
+</section>
+
+<section id="reviews" class="section reviews">
+  <div class="section-head"><h2>Wat onze klanten zeggen</h2><p>*Voorbeeldweergave — vervang dit later door echte klantreviews.</p></div>
+  <div class="review-grid">
+    <div class="review">★★★★★<p>“Mijn auto ziet er weer als nieuw uit.”</p><b>Voorbeeldklant</b></div>
+    <div class="review">★★★★★<p>“Snelle en professionele service.”</p><b>Voorbeeldklant</b></div>
+    <div class="review">★★★★★<p>“Handig dat ze aan huis komen.”</p><b>Voorbeeldklant</b></div>
+  </div>
+</section>
+</main>
+
+<footer id="contact"><div class="brand">CLEAN<span>R</span><small>AUTO DETAILING</small></div><p>Professionele auto-reiniging bij u aan huis.</p><div>📞 +31 6 12345678 · ✉ info@cleanr.nl</div><small>Algemene voorwaarden · Privacybeleid · Cookiebeleid</small></footer>
+
+<div class="modal" id="bookingModal">
+  <div class="modal-box">
+    <button class="close" onclick="closeBooking()">×</button>
+    <h2>Boek uw auto-reiniging</h2>
+    <div class="progress"><i></i></div>
+    <form id="bookingForm">
+      <label>Dienst<select id="service"><option>Interieurreiniging</option><option>Exterieurreiniging</option><option>Complete reiniging</option></select></label>
+      <label>Type auto<select><option>Personenauto</option><option>SUV</option><option>Bestelbus</option></select></label>
+      <label>Datum<input type="date" id="date" required></label>
+      <label>Tijd<select id="time"><option>10:00</option><option>12:00</option><option>14:00</option><option>16:00</option><option>18:00</option></select></label>
+      <label>Naam<input id="name" required placeholder="Uw naam"></label>
+      <label>Telefoon<input id="phone" required placeholder="+31 6 ..."></label>
+      <label>Adres<input id="address" required placeholder="Straat, huisnummer, plaats"></label>
+      <div class="total">Geschatte prijs: <b id="total">€80</b></div>
+      <button class="btn primary big" type="submit">Afspraak bevestigen →</button>
+    </form>
+    <div id="success" class="success" hidden>
+      <div class="success-icon">✓</div>
+      <h2>Afspraak aangevraagd!</h2>
+      <p>Dit is een demo. In de echte versie ontvangt de eigenaar hier direct een SMS/WhatsApp-melding.</p>
+      <button class="btn primary" onclick="closeBooking()">Sluiten</button>
+    </div>
+  </div>
+</div>
+
+<div class="chat" id="chat">
+  <div class="chat-head">🚘 CLEANR AI <span>● Online</span><button onclick="closeChat()">×</button></div>
+  <div class="chat-body" id="chatBody"><div class="bot">Hallo! 👋 Waarmee kan ik u helpen?</div></div>
+  <div class="chat-actions"><button onclick="botReply('Ik wil een afspraak maken')">Afspraak maken</button><button onclick="botReply('Wat kost het?')">Prijs</button></div>
+  <div class="chat-input"><input id="chatInput" placeholder="Typ uw bericht..." onkeydown="if(event.key==='Enter')sendChat()"><button onclick="sendChat()">➤</button></div>
+</div>
+<button class="chat-fab" onclick="openChat()">💬</button>
+<script src="app.js"></script>
+</body>
+</html>
